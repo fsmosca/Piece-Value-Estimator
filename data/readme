@@ -8,7 +8,7 @@ Postions are saved with the following conditions:
 * If position is from the game with 1-0 or 0-1 results.
 
 Data format:
-<epd>, <pawn_diff = wpawn_count - blackpawn_count> <knight_diff>, <bishop_diff>, <rook_diff>, <queen_diff>, <game_result>
+<epd>, <pawn_diff = white_pawn_count - black_pawn_count> <knight_diff>, <bishop_diff>, <rook_diff>, <queen_diff>, <game_result>
 
 game_result:
   * If white wins, set it to 1.
