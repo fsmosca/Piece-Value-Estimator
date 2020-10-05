@@ -4,7 +4,7 @@ Piece Value Estimator
 """
 
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 
 import pandas as pd
@@ -19,11 +19,11 @@ def main():
     df = pd.read_csv(csvfn)
 
     # Show in console.
-    df.columns = ['fen', 'P-p', 'N-n', 'B-n', 'R-r', 'Q-q', 'result']
+    df.columns = ['epd', 'P-p', 'N-n', 'B-n', 'R-r', 'Q-q', 'result']
     print(df)
 
     # Redefine column names for regression.
-    df.columns = ['fen', 'P', 'N', 'B', 'R', 'Q', 'result']
+    df.columns = ['epd', 'P', 'N', 'B', 'R', 'Q', 'result']
     
     total_row = df.shape[0]
     p_cnt = df[df['P'] > 0].shape[0]
@@ -41,7 +41,7 @@ def main():
     print(f'piece: R-r, num: {r_cnt}, pct: {100*r_cnt/total_row:0.2f}%')
     print(f'piece: Q-q, num: {q_cnt}, pct: {100*q_cnt/total_row:0.2f}%\n\n')
 
-    # Don't include fen in the independent variable.
+    # Don't include epd in the independent variable.
     X = df[['P', 'N', 'B', 'R', 'Q']]
 
     # Our target or objective value
