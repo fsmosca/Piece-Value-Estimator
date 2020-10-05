@@ -1,5 +1,5 @@
 """
-Piece Value Regressor
+Piece Value Estimator
 
 """
 
