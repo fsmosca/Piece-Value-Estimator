@@ -1,1 +1,7 @@
-Data are taken from the week in chess pgn files.
+Data for regression
+
+Source: pgn files from The Week in Chess.
+
+Postions are saved with the following conditions:
+* If the move in the game is not a capture, or not a checking move or not a promote move, save it.
+* If side to move is not in check, save it.
