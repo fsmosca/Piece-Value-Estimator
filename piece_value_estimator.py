@@ -4,7 +4,7 @@ Piece Value Estimator
 """
 
 
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 
 
 import pandas as pd
@@ -18,8 +18,8 @@ def main():
     csvfn = './data/chess_material.csv'
     df = pd.read_csv(csvfn)
 
-    # Show in console.
-    df.columns = ['epd', 'P-p', 'N-n', 'B-n', 'R-r', 'Q-q', 'result']
+    # Show in console. Upper case is for white nand lower case is for black.
+    df.columns = ['epd', 'P-p', 'N-n', 'B-b', 'R-r', 'Q-q', 'result']
     print(df)
 
     # Redefine column names for regression.
