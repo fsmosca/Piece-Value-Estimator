@@ -96,6 +96,7 @@ r2_score : coefficient of determination
 ```
 
 ### Credits
+* [sklearn](https://scikit-learn.org/stable/)
 * [A post from talkchess](http://talkchess.com/forum3/viewtopic.php?f=7&t=75267)
 * [RBloggers](https://www.r-bloggers.com/2015/06/big-data-and-chess-what-are-the-predictive-point-values-of-chess-pieces/)
 * [The Week In Chess](https://theweekinchess.com/)
