@@ -3,12 +3,20 @@ Data for regression
 Source: pgn files from The Week in Chess.
 
 Postions are saved with the following conditions:
-* If the move in the game is not a capture, or not a checking move or not a promote move, save it.
-* If side to move is not in check, save it.
-* If position is from the game with 1-0 or 0-1 results.
+* If the move in the game is not a capture, and not a checking move and not a promote move and the side to move is not in check and the game has either 1-0 or 0-1 result.
 
 Data format:
 <epd>, <pawn_diff = white_pawn_count - black_pawn_count> <knight_diff>, <bishop_diff>, <rook_diff>, <queen_diff>, <game_result>
+
+Example:
+R4n2/4k3/P3n2p/5R2/8/7P/2r3PK/8 b - -,2,-2,0,1,0,1
+pawn_diff = 2 (white is ahead by 2 pawns)
+knight_diff = -2 (black is ahead by 2 knights)
+bishop_diff = 0
+rook_diff = 1 (white is ahead by 1 rook)
+queen_diff = 0
+result = 1 (white wins this game)
+
 
 game_result:
   * If white wins, set it to 1.
